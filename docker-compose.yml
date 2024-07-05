@@ -1,0 +1,43 @@
+services:
+  c1:
+    build:
+      context: ./C1
+      dockerfile: Dockerfile
+    container_name: c1_container
+    ports:
+      - "2221:22"
+    networks:
+      - common_network
+
+  c2:
+    build:
+      context: ./C2
+      dockerfile: Dockerfile
+    container_name: c2_container
+    ports:
+      - "2222:22"
+    networks:
+      - common_network
+
+  c3:
+    build:
+      context: ./C3
+      dockerfile: Dockerfile
+    container_name: c3_container
+    ports:
+      - "2223:22"
+    networks:
+      - common_network
+
+  c4:
+    build:
+      context: ./C4
+      dockerfile: Dockerfile
+    container_name: c4_container
+    ports:
+      - "2224:22"
+    networks:
+      - common_network
+
+networks:
+  common_network:
